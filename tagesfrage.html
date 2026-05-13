@@ -232,7 +232,7 @@ async function callAPI(key,cat){
     method:'POST',
     headers:{'Content-Type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
     body:JSON.stringify({
-      model:'claude-sonnet-4-20250514',max_tokens:1000,
+      model:'claude-haiku-4-5-20251001',max_tokens:1000,
       system:'Du bist Facharzt für Anästhesiologie. Erstelle klinisch relevante Weiterbildungsfragen auf Deutsch für Anästhesieassistenten. Antworte NUR mit validem JSON ohne Markdown.',
       messages:[{role:'user',content:`Weiterbildungsfrage für Anästhesieassistenten, Kategorie "${cat}", Schwierigkeitsgrad mittel, Antwort 3–5 Sätze.\nNUR dieses JSON: {"frage":"...","antwort":"...","kategorie":"${cat}"}`}]
     })
